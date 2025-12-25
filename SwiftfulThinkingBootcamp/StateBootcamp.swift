@@ -4,6 +4,26 @@
 //
 //  Created by Akhilesh Rathor on 05/03/25.
 //
+/*
+ Q1. What is the @State and @Binding and when to use these?
+ Ans.
+ 
+ @State is a property wrapper that allows a view to manage its own local, private data. When the state value changes, SwiftUI automatically re-renders the view to reflect those changes.
+ 
+ 📌 Key Points:
+ * @State is used inside the same view only.
+
+ * Should be private — because state is owned by the view.
+
+ * Triggers view update on change.
+
+ * Works like a lightweight reactive variable.
+ 
+ 
+ @Binding is a property wrapper in SwiftUI used to create a two-way connection between a child view and a state property in the parent view. It allows a child view to read and write a value that is stored in a parent view, enabling shared state management across different views.
+ 
+ 
+ */
 
 import SwiftUI
 

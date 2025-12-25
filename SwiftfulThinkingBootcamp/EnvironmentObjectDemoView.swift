@@ -4,6 +4,19 @@
 //
 //  Created by Akhilesh Rathor on 22/03/25.
 //
+/*
+ 3. What is the @EnverirmentObject and when to use?
+
+ Ans.
+ @EnvironmentObject is a property wrapper used to access shared data across multiple views in a SwiftUI application. It allows you to inject an observable object into the environment, making it available to any child view that needs to access it without having to pass it explicitly through the view hierarchy.
+ 
+ 
+ 🔸 When to Use @EnvironmentObject:
+ 1. When you need to share the same data across many views.
+ 2. When you want to avoid passing objects manually through each view.
+ 3. When using deeply nested views in a SwiftUI hierarchy.
+ 4. Ideal for global state like user settings, theme, or authentication info.
+ */
 
 import SwiftUI
 
