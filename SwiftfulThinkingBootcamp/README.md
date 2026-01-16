@@ -39,3 +39,257 @@ ZStack {
         .foregroundColor(.white)
 }
 
+14. What is ObservableObject?
+15. What is @Published?
+
+
+
+
+1. What is ObservableObject?
+
+Answer:
+ObservableObject is a protocol that allows SwiftUI views to observe a class and refresh UI when data changes.
+
+Example:
+
+class ViewModel: ObservableObject {
+    @Published var title = "Hello"
+}
+
+2. What is @Published?
+
+Answer:
+@Published notifies SwiftUI whenever a property value changes.
+
+Example:
+
+@Published var count = 0
+
+3. How does SwiftUI know when to update a view?
+
+Answer:
+SwiftUI refreshes a view automatically when state-related properties change like @State, @Binding, or @Published.
+
+Example:
+
+@State var name = "Akhilesh"
+
+4. What is NavigationStack?
+
+Answer:
+NavigationStack is used for navigation in SwiftUI and replaces NavigationView.
+
+Example:
+
+NavigationStack {
+    NavigationLink("Next", value: 1)
+}
+
+5. Difference between NavigationView and NavigationStack?
+
+Answer:
+NavigationStack is more powerful, supports programmatic navigation and deep linking.
+
+Example:
+
+@State var path = NavigationPath()
+
+6. What is .onAppear?
+
+Answer:
+.onAppear runs code when the view appears on screen.
+
+Example:
+
+.onAppear {
+    fetchData()
+}
+
+7. Difference between .onAppear and .task?
+
+Answer:
+.task is async-friendly and cancels automatically when view disappears.
+
+Example:
+
+.task {
+    await loadData()
+}
+
+8. What is AnyView?
+
+Answer:
+AnyView erases view type but hurts performance and should be avoided if possible.
+
+Example:
+
+AnyView(Text("Hello"))
+
+9. What is LazyVStack and why use it?
+
+Answer:
+LazyVStack loads views only when needed, improving performance.
+
+Example:
+
+LazyVStack {
+    ForEach(items) { item in
+        Text(item.name)
+    }
+}
+
+10. Difference between VStack and LazyVStack?
+
+Answer:
+VStack loads all views at once, LazyVStack loads views on demand.
+
+11. What is ForEach?
+
+Answer:
+ForEach is used to create multiple views from a collection.
+
+Example:
+
+ForEach(users, id: \.id) {
+    Text($0.name)
+}
+
+12. What is Identifiable?
+
+Answer:
+Identifiable provides a unique id for SwiftUI diffing.
+
+Example:
+
+struct User: Identifiable {
+    let id = UUID()
+}
+
+13. What is .sheet?
+
+Answer:
+.sheet presents a modal screen.
+
+Example:
+
+.sheet(isPresented: $show) {
+    DetailView()
+}
+
+14. What is .fullScreenCover?
+
+Answer:
+Used to present a full-screen modal.
+
+Example:
+
+.fullScreenCover(isPresented: $show) {
+    LoginView()
+}
+
+15. What is .alert?
+
+Answer:
+Displays an alert to the user.
+
+Example:
+
+.alert("Error", isPresented: $showError) {
+    Button("OK") { }
+}
+
+16. What is .overlay?
+
+Answer:
+Adds a view on top of another view.
+
+Example:
+
+Text("Hello")
+    .overlay(Circle().stroke())
+
+17. What is .background?
+
+Answer:
+Adds a background behind a view.
+
+Example:
+
+Text("Hi")
+    .background(Color.yellow)
+
+18. What is .frame?
+
+Answer:
+Defines size of a view.
+
+Example:
+
+.frame(width: 100, height: 50)
+
+19. What is .animation and withAnimation?
+
+Answer:
+Used to animate state changes.
+
+Example:
+
+withAnimation {
+    isOn.toggle()
+}
+
+20. What is @FocusState?
+
+Answer:
+Used to manage keyboard focus.
+
+Example:
+
+@FocusState var isFocused: Bool
+
+21. What is .redacted?
+
+Answer:
+Used to show placeholder UI during loading.
+
+Example:
+
+.redacted(reason: .placeholder)
+
+22. How to handle dark mode in SwiftUI?
+
+Answer:
+SwiftUI automatically supports dark mode using system colors.
+
+Example:
+
+Color.primary
+
+23. What is PreviewProvider?
+
+Answer:
+Used to preview SwiftUI views in Xcode.
+
+Example:
+
+#Preview {
+    ContentView()
+}
+
+24. How do you pass data backward in SwiftUI?
+
+Answer:
+By using @Binding or closures.
+
+Example:
+
+@Binding var text: String
+
+25. What is PreferenceKey?
+
+Answer:
+Used to pass data from child view to parent view.
+
+Example:
+
+struct HeightKey: PreferenceKey { }

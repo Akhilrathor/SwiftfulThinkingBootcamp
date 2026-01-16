@@ -16,6 +16,31 @@
  2. When you want to avoid passing objects manually through each view.
  3. When using deeply nested views in a SwiftUI hierarchy.
  4. Ideal for global state like user settings, theme, or authentication info.
+ 
+ 
+ Q 14. What is ObservableObject?
+ Ans.
+ 
+ ObservableObject is a protocol in SwiftUI that allows a class to publish changes to its data so that SwiftUI views automatically update when that data changes.
+ 
+ It works with @Published properties and is mainly used for shared or external state.
+ 
+ 
+ Q 15. What is @Published?
+ Ans.
+ 
+ @Published is a property wrapper from the Combine framework that automatically notifies subscribers when a property’s value changes.
+ 
+ In SwiftUI, it is mainly used inside an ObservableObject to trigger UI updates when data changes.
+ 
+ 
+ # Important Points (Interview-Focused):-
+
+ * Belongs to Combine, not SwiftUI directly.
+ * Must be used with ObservableObject.
+ * Works only with class properties.
+ * Emits changes before the value is set (willSet-like behavior).
+ * Replaces old KVO patterns in modern SwiftUI apps.
  */
 
 import SwiftUI
