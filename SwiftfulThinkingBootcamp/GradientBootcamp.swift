@@ -17,7 +17,7 @@ struct GradientBootcamp: View {
 //                    startPoint: .topLeading,
 //                    endPoint: .bottomTrailing)
 //                RadialGradient(gradient: Gradient(colors: [Color.red, Color.blue]), center: .leading, startRadius: 5, endRadius: 400)
-                AngularGradient(gradient: Gradient(colors: [Color.red, Color.blue]),
+                AngularGradient(gradient: Gradient(colors: [Color.red, Color.gray]),
                                 center: .topLeading,
                                 angle: .degrees(180 + 45))
             )

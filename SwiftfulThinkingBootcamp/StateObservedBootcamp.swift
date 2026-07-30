@@ -38,9 +38,10 @@ Typically used in parent/root views
  */
 
 import SwiftUI
-
-class CounterModel: ObservableObject {
-    @Published var count: Int = 0
+@Observable
+class CounterModel{//}: ObservableObject {
+//    @Published var count: Int = 0
+    var count: Int = 0
     
     init() {
         print("init is calling!!")
@@ -52,8 +53,9 @@ class CounterModel: ObservableObject {
 }
 
 struct StateObservedBootcamp: View {
-    @ObservedObject var vm = CounterModel()
+//    @ObservedObject var vm = CounterModel()
 //    @StateObject var vm = CounterModel()
+    var vm = CounterModel()
     
     var body: some View {
         VStack(spacing: 16){

@@ -14,7 +14,7 @@ struct BackgroundAndOverlaysBootcamp: View {
 //                Color.red
 //                LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing)
                 Circle()
-                    .fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                    .fill(LinearGradient(gradient: Gradient(colors: [Color.red, Color.green]), startPoint: .leading, endPoint: .trailing))
                     .frame(width: 100, height: 100, alignment: .center)
             )
             .background(

@@ -24,7 +24,7 @@ struct GeometryReaderBootcamp: View {
             HStack(spacing: 0){
                 Rectangle().fill(Color.red)
                     .frame(width: geometry.size.width * 0.666)
-                Rectangle().fill(Color.blue)
+                Rectangle().fill(Color.yellow)
             }
             .ignoresSafeArea()
             

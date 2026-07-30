@@ -29,6 +29,7 @@
 		41C628912D8F12D700DF4F1A /* EnvironmentObjectDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C628902D8F12D700DF4F1A /* EnvironmentObjectDemoView.swift */; };
 		41DDE16B2D78CD5400061953 /* StateBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DDE16A2D78CD5400061953 /* StateBootcamp.swift */; };
 		41DDE16D2D78D93D00061953 /* BindingBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41DDE16C2D78D93D00061953 /* BindingBootcamp.swift */; };
+		838248622FEEBEA30023ECAA /* TextFieldChanges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 838248612FEEBEA30023ECAA /* TextFieldChanges.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		41C628902D8F12D700DF4F1A /* EnvironmentObjectDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectDemoView.swift; sourceTree = "<group>"; };
 		41DDE16A2D78CD5400061953 /* StateBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateBootcamp.swift; sourceTree = "<group>"; };
 		41DDE16C2D78D93D00061953 /* BindingBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingBootcamp.swift; sourceTree = "<group>"; };
+		838248612FEEBEA30023ECAA /* TextFieldChanges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldChanges.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				41531B972E3FD63200D76835 /* ViewBuilderBootcamp.swift */,
 				419352832E4133DA00BB49AB /* GeometryReaderBootcamp.swift */,
 				416C945B2E50661A00E9D3BC /* CombineBootcamp.swift */,
+				838248612FEEBEA30023ECAA /* TextFieldChanges.swift */,
 				4123F92A2BB83ECE00B4D405 /* Assets.xcassets */,
 				4123F92C2BB83ECE00B4D405 /* Preview Content */,
 				4189C1612E3A911E00721B7C /* README.md */,
@@ -211,6 +214,7 @@
 				419352842E4133DA00BB49AB /* GeometryReaderBootcamp.swift in Sources */,
 				4192D4172E3E8A9F0057F8CE /* StateObservedBootcamp.swift in Sources */,
 				4110B0892BCC0D2E00FF736E /* IconsBootcamp.swift in Sources */,
+				838248622FEEBEA30023ECAA /* TextFieldChanges.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

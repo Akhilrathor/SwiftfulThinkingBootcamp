@@ -39,40 +39,28 @@ ZStack {
         .foregroundColor(.white)
 }
 
-14. What is ObservableObject?
-15. What is @Published?
-
-
-
-
-1. What is ObservableObject?
-
-Answer:
-ObservableObject is a protocol that allows SwiftUI views to observe a class and refresh UI when data changes.
-
-Example:
-
-class ViewModel: ObservableObject {
-    @Published var title = "Hello"
-}
-
-2. What is @Published?
-
-Answer:
-@Published notifies SwiftUI whenever a property value changes.
-
-Example:
-
-@Published var count = 0
-
 3. How does SwiftUI know when to update a view?
 
 Answer:
-SwiftUI refreshes a view automatically when state-related properties change like @State, @Binding, or @Published.
+SwiftUI updates a view whenever observed state changes—it uses a reactive, declarative paradigm where views are functions of state, and the framework automatically invalidates and recomputes the view hierarchy when @State, @ObservedObject, @StateObject, or @EnvironmentObject values mutate.
 
-Example:
+Example
+struct CounterView: View {
+    @State private var count = 0
 
-@State var name = "Akhilesh"
+    var body: some View {
+        VStack {
+            Text("Count: \(count)")
+            Button("Add") {
+                count += 1   // Triggers UI update
+            }
+        }
+    }
+}
+Changing count causes SwiftUI to:
+* Invalidate the view
+* Recalculate body
+* Update only the Text
 
 4. What is NavigationStack?
 
